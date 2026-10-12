@@ -1,0 +1,14 @@
+{
+  "files.watcherExclude": {
+    "**/data/**": true,
+    "**/.venv/**": true,
+    "**/checkpoints/**": true,
+    "**/__pycache__/**": true,
+    "**/.pytest_cache/**": true
+  },
+  "search.exclude": {
+    "**/data": true,
+    "**/.venv": true,
+    "**/checkpoints": true
+  }
+}

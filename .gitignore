@@ -1,0 +1,34 @@
+# Datasets & Big files (Excluidos de Git)
+data/*
+!data/README.md
+*.tar.gz
+*.parquet
+*.arrow
+*.csv
+
+# Python & Virtual Environments
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Model Weights & Checkpoints (>100MB)
+Cod/checkpoints/*
+!Cod/checkpoints/README.md
+*.pt
+*.pth
+*.onnx
+
+# LaTeX build intermediates (Mantiene el .tex y .pdf final)
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# IDE & Editor caches
+.ipynb_checkpoints/
+logs/
+.DS_Store
