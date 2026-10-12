@@ -45,7 +45,7 @@ food_cells = [
     md_cell("""# Proyecto: Machine Learning y Deep Learning Aplicados (UTEC)
 ## Tarea 1: Clasificación de Imágenes en Food-101 (101 Clases)
 **Profesor:** Marcelo Jafett Contreras Cabrera  
-**Hardware Optimizado:** NVIDIA GeForce RTX 5070 (12GB VRAM) + PyTorch 2.14 AMP (FP16/TF32)
+**Entorno de Ejecución:** Local con aceleración GPU (PyTorch AMP FP16/TF32)
 
 ---
 ### 1. Definición del Problema Matemático
@@ -300,7 +300,7 @@ nlp_cells = [
     md_cell("""# Proyecto: Machine Learning y Deep Learning Aplicados (UTEC)
 ## Tarea 2: Clasificación de Textos en AG News (4 Clases)
 **Profesor:** Marcelo Jafett Contreras Cabrera  
-**Hardware Optimizado:** NVIDIA GeForce RTX 5070 (12GB VRAM) + PyTorch 2.14 AMP (FP16/TF32)
+**Entorno de Ejecución:** Local con aceleración GPU (PyTorch AMP FP16/TF32)
 
 ---
 ### 1. Definición del Problema Matemático
@@ -378,7 +378,7 @@ plt.show()"""),
 #### **Método 2: Deep Learning con Transfer Learning (DistilBERT)**
 * **Espacio de Hipótesis:** Red neuronal de transformadores con auto-atención bidireccional de 6 capas y 66M parámetros pre-entrenada con Masked Language Modeling:
   $$h_{[CLS]} = \\text{DistilBERT}(x), \\quad \\hat{y} = \\text{Softmax}(W h_{[CLS]} + b)$$
-* **Optimizador:** AdamW ($lr = 2 \\times 10^{-5}$, weight decay $0.01$) con precisión mixta automática (AMP FP16) en los Tensor Cores de la GPU RTX 5070."""),
+* **Optimizador:** AdamW ($lr = 2 \\times 10^{-5}$, weight decay $0.01$) con precisión mixta automática (AMP FP16) en GPU local."""),
 
     code_cell("""# 3. Método 1: Entrenamiento y Evaluación del Pipeline Clásico
 classical_model = ClassicalNLPBaseline(classifier_type="svm", max_features=25000, ngram_range=(1, 2), C=1.0)

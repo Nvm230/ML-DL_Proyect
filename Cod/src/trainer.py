@@ -6,7 +6,7 @@ from tqdm.auto import tqdm
 
 class Trainer:
     """
-    Entrenador genérico de PyTorch optimizado para GPUs NVIDIA (RTX 5070).
+    Entrenador genérico de PyTorch optimizado para GPU local (CUDA).
     Soporta Mixed Precision (AMP FP16), Gradient Scaling, Schedulers y Checkpointing.
     """
     def __init__(

@@ -13,7 +13,7 @@ CHECKPOINTS_DIR = os.path.join(PROJECT_ROOT, "Cod", "checkpoints")
 os.makedirs(CHECKPOINTS_DIR, exist_ok=True)
 
 def setup_hardware():
-    """Configura optimizaciones para la GPU NVIDIA RTX 5070 y CPU Intel Ultra."""
+    """Configura optimizaciones para la GPU local y núcleos de CPU."""
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     if torch.cuda.is_available():

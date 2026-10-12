@@ -2,7 +2,7 @@
 
 **Universidad:** Universidad de Ingeniería y Tecnología (UTEC)  
 **Profesor:** Marcelo Jafett Contreras Cabrera (`mcontreras@utec.edu.pe`)  
-**Hardware Optimizado:** NVIDIA GeForce RTX 5070 (12 GB VRAM GDDR7) + Intel Core Ultra CPU
+**Entorno de Ejecución:** Ejecutado en local con aceleración por GPU (CUDA)
 
 ---
 
@@ -39,7 +39,7 @@ MLDP/
 │   │   └── 02_agnews_classification.ipynb
 │   ├── src/                           # Módulos Python reutilizables
 │   │   ├── __init__.py
-│   │   ├── config.py                  # Configuración de GPU RTX 5070 (TF32, cuDNN, semillas)
+│   │   ├── config.py                  # Configuración de GPU local (TF32, cuDNN, semillas)
 │   │   ├── metrics.py                 # Accuracy, Precision, Recall, F1 (Macro/Weighted), Conf. Matrix
 │   │   ├── visualize.py               # Curvas de pérdida/acc, t-SNE, PCA, UMAP
 │   │   ├── trainer.py                 # Loop de entrenamiento PyTorch con AMP FP16, GradScaler y Checkpointing
@@ -74,7 +74,7 @@ MLDP/
 * **Transformers:** `5.19.0`
 * **Scikit-Learn:** `1.9.1`
 
-Las optimizaciones específicas habilitadas en hardware NVIDIA RTX 5070 incluyen:
+Las optimizaciones específicas habilitadas en el entorno local con GPU incluyen:
 * **TensorFloat-32 (TF32):** `torch.backends.cuda.matmul.allow_tf32 = True`
 * **cuDNN Benchmark:** `torch.backends.cudnn.benchmark = True`
 * **Automatic Mixed Precision (AMP):** FP16 con `torch.amp.GradScaler('cuda')`
