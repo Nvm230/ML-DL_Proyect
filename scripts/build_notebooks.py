@@ -389,7 +389,13 @@ fit_time = classical_model.fit(train_df["text"], train_df["label"])
 # Predicción en el conjunto de prueba
 test_preds_m1, test_probs_m1 = classical_model.predict(test_df["text"])
 metrics_m1 = compute_classification_metrics(test_df["label"], test_preds_m1, y_probs=test_probs_m1, class_names=AG_NEWS_CLASSES)
-print_metrics_summary(metrics_m1, model_name="Método 1: TF-IDF + LinearSVC")"""),
+print_metrics_summary(metrics_m1, model_name="Método 1: TF-IDF + LinearSVC")
+
+# Guardar checkpoint del modelo clásico
+import joblib
+joblib_path = os.path.join(CHECKPOINTS_DIR, "agnews_linearsvc_tfidf.joblib")
+joblib.dump(classical_model, joblib_path)
+print(f"[Checkpoint] Modelo clásico guardado exitosamente en: {joblib_path}")"""),
 
     code_cell("""# 4. Método 2: Preparación de Tokenizer y DataLoaders para Transformer
 tokenizer = get_nlp_tokenizer("distilbert-base-uncased")
