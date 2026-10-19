@@ -16,6 +16,7 @@ __pycache__/
 # Model Weights & Checkpoints (>100MB)
 Cod/checkpoints/*
 !Cod/checkpoints/README.md
+!Cod/checkpoints/agnews_linearsvc_tfidf.joblib
 *.pt
 *.pth
 *.onnx
